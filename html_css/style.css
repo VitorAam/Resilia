@@ -2,18 +2,20 @@ body {
     background-image: url(https://i.pinimg.com/736x/00/45/d3/0045d3cebd9711b83689bd592d9712a5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 97vh;
+    text-align: center;
 }
 
 p {
     margin: 10px;
     font-size: 1.2em;
-    text-align: justify;
     height: 5em;
+    text-align: justify;
 }
 
 #image_text {
     height: 2em;
+    text-align: center;
 }
 
 img {
@@ -21,10 +23,13 @@ img {
 }
 
 h1 {
-    color: rgb(21, 28, 121);
+    color: rgb(5, 65, 121);
 }
 
 ul {
     border: 1px solid blue;
     color: rgb(146, 53, 10);
+    padding: 15px 20px;
+    list-style-type: square;
+    list-style-position: inside;
 }
