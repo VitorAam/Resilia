@@ -1,0 +1,30 @@
+body {
+    background-image: url(https://i.pinimg.com/736x/00/45/d3/0045d3cebd9711b83689bd592d9712a5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+p {
+    margin: 10px;
+    font-size: 1.2em;
+    text-align: justify;
+    height: 5em;
+}
+
+#image_text {
+    height: 2em;
+}
+
+img {
+    height: 250px;
+}
+
+h1 {
+    color: rgb(21, 28, 121);
+}
+
+ul {
+    border: 1px solid blue;
+    color: rgb(146, 53, 10);
+}
