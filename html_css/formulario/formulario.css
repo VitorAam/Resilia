@@ -30,17 +30,44 @@
     border: 1px solid black;
 }
 
+.flex-item:hover {
+    box-shadow: 6px 6px 40px 10px rgba(128, 0, 128, 0.719);
+    transition-duration: 1s;
+    transform: rotate3d(0, 1, 0, 15deg);
+}
+
 #alternative_content {
     display: block;
     text-align: center;
 }
 
-#alternative_content > p {
-    margin-top: 20px;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-#alternative_content > img{
-    height: 50%;
+p {
+    margin-top: 30%;
+    line-height: 20px;
+    border: 1px ;
+}
+
+strong {
+    margin-bottom: 7px;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 1px #ffd0007a;
+    font-size: 1.3em;
+    display: block;
+}
+
+span {
+    color: #ffd000;
+    text-shadow: 1px 2px 1px black;
+}
+
+img{
+    width: 20rem;
 }
 
 #main {
@@ -73,7 +100,7 @@ input {
     margin-bottom: 20px;
 }
 
-input:hover{
+input:hover {
     color: #ffd000;
     background-color: black;
     transition-duration: 1s;
@@ -101,6 +128,7 @@ label {
     color: #17BEBB;
     padding: 20px;
     font-size: 1.2em;
+    border-radius: 40px;
 }
 #birthday {
     width: 30%;
