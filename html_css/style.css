@@ -1,35 +1,72 @@
+@charset "UTF-8";
+
 body {
-    background-image: url(https://i.pinimg.com/736x/00/45/d3/0045d3cebd9711b83689bd592d9712a5.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(https://media.istockphoto.com/vectors/abstract-simple-geometric-vector-seamless-pattern-with-gold-line-on-vector-id1160720443?k=20&m=1160720443&s=612x612&w=0&h=tkTnYVL5jBOVK_wFgrixKsYzWVN7-x4AoEbg9ky7hoE=);
+    background-repeat: repeat;
     height: 97vh;
     text-align: center;
 }
 
 p {
+    margin-top: 0px;
     margin: 10px;
     font-size: 1.2em;
     height: 5em;
-    text-align: justify;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.445);
 }
 
 #image_text {
     height: 2em;
     text-align: center;
+    margin: 0px 30%;
+    margin-top: -5px;
+    color: coral;
+    background-color: black;
+    border-radius: 0px 0px 30px 30px;
 }
 
+hr {
+    border: 2px solid rgba(6, 69, 128, 0.555);
+    margin: 25px 0px;
+}
+
+div {
+    width: 70vw;
+    margin: auto;
+}
 img {
-    height: 250px;
+    height: 350px;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.534);
 }
 
 h1 {
-    color: rgb(5, 65, 121);
+    color: coral;
+    background-color: black;
+    margin-bottom: 0px;
+    margin: 0px auto -10px auto;
+    border-radius: 20px;
+    width: 50vh;
 }
-
+h2 {
+    border-radius: 5px 5px 0px 0px;
+    padding-top: 5px;
+    background-color: black;
+    color: aqua;
+    margin: 0px 20%;
+}
 ul {
-    border: 1px solid blue;
+    margin: 0px 20%;
+    border: 5px solid black;
+    background-color: white;
     color: rgb(146, 53, 10);
     padding: 15px 20px;
     list-style-type: square;
     list-style-position: inside;
+    border-radius: 0px 0px 5px 5px;
 }
