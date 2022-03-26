@@ -10,7 +10,7 @@
 .flex-container {
     box-sizing: border-box;
     padding: 10px;
-    background-color: #17BEBB;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/149/591/584/simple-white-pattern-background-wallpaper-preview.jpg);
     color: white;
     min-height: 100vh;
     display: flex;
@@ -22,7 +22,7 @@
 }
 
 .flex-item {
-    background-color: #EDB88B;
+    background-color: #6D5A72;
     width: 400px;
     height: 600px;
     border-radius: 10px;
@@ -30,12 +30,25 @@
     border: 1px solid black;
 }
 
+#alternative_content {
+    display: block;
+    text-align: center;
+}
+
+#alternative_content > p {
+    margin-top: 20px;
+}
+
+#alternative_content > img{
+    height: 50%;
+}
+
 #main {
     text-align: justify;
 }
 
 #main h1 {
-    margin-top: 10%;
+    margin-top: 15%;
     text-align: center;
     color: black;
     font-family: "Archivo Black", sans-serif;
@@ -60,8 +73,15 @@ input {
     margin-bottom: 20px;
 }
 
-input:hover {
-    background-color: #ffd000;
+input:hover{
+    color: #ffd000;
+    background-color: black;
+    transition-duration: 1s;
+}
+
+input:focus {
+    color: #ffd000;
+    background-color: black;
     transition-duration: 1s;
 }
 label {
@@ -79,4 +99,19 @@ label {
     margin-top: 20%;
     width: 100%;
     color: #17BEBB;
+    padding: 20px;
+    font-size: 1.2em;
+}
+#birthday {
+    width: 30%;
+    margin: auto;
+}
+
+#birthday:hover {
+    color: #ffd000;
+    background-color: black;
+    transition-duration: 1s;
+}
+#special_pattern1 {
+    margin-left: 35%;
 }
