@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.flex-container {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #17BEBB;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20vw;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item {
+    background-color: #EDB88B;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.575);
+    border: 1px solid black;
+}
+
+#main {
+    text-align: justify;
+}
+
+#main h1 {
+    margin-top: 10%;
+    text-align: center;
+    color: black;
+    font-family: "Archivo Black", sans-serif;
+    text-shadow: 2px 2px 1px #ffd000;
+}
+
+#main form {
+    padding: 20px;
+}
+
+input {
+    display: block;
+    width: 98%;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: grey;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.432);
+    margin: center;
+    margin-bottom: 20px;
+}
+
+input:hover {
+    background-color: #ffd000;
+    transition-duration: 1s;
+}
+label {
+    margin: center;
+    color: black;
+    font-family: "Archivo Black", sans-serif;
+}
+
+#submit {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+#submit > input {
+    margin-top: 20%;
+    width: 100%;
+    color: #17BEBB;
+}
