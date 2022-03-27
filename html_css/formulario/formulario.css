@@ -22,7 +22,7 @@
 }
 
 .flex-item {
-    background-color: #6D5A72;
+    background-color: #6d5a72d0;
     width: 400px;
     height: 600px;
     border-radius: 10px;
@@ -111,6 +111,7 @@ input:focus {
     background-color: black;
     transition-duration: 1s;
 }
+
 label {
     margin: center;
     color: black;
@@ -122,6 +123,7 @@ label {
     margin: 0px;
     padding: 0px;
 }
+
 #submit > input {
     margin-top: 20%;
     width: 100%;
@@ -130,6 +132,7 @@ label {
     font-size: 1.2em;
     border-radius: 40px;
 }
+
 #birthday {
     width: 30%;
     margin: auto;
@@ -140,6 +143,7 @@ label {
     background-color: black;
     transition-duration: 1s;
 }
+
 #special_pattern1 {
     margin-left: 35%;
 }
