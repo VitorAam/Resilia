@@ -37,10 +37,19 @@ h1 {
     color: yellow;
 }
 
+h1:hover {
+    font-size: 2.5em;
+    color: purple;
+}
+
 a {
     color: black;
     text-decoration: none;
     font-size: 1.3em;
+}
+
+nav a:hover {
+    color: blue;
 }
 
 @media (max-width: 700px) {
