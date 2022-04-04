@@ -7,11 +7,14 @@
 body {
     width: 100%;
     height: 100vh;
+    background-image: url(https://www.papeldeparede.etc.br/fotos/wp-content/uploads/1366_The-Dog-at-Sunset.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
 header {
     display: flex;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.515);
     justify-content: space-between;
     height: 5vh;
     width: 100%;
@@ -28,7 +31,7 @@ nav {
     justify-content: space-around;
     width: 40%;
     height: 100%;
-    background-color: rgb(219, 204, 65);
+    background-color: rgba(219, 204, 65, 0.626);
     align-items: center;
 }
 
@@ -51,6 +54,24 @@ a {
 nav a:hover {
     color: blue;
     font-size: 1.7em;
+}
+
+main {
+    height: calc(97vh - 5vh);
+}
+
+footer {
+    background-color: rgba(128, 128, 128, 0.883);
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 3vw;
+    height: 3vh;
+    color: white;
+}
+
+p {
+    font-size: 1.1em;
 }
 
 @media (max-width: 700px) {
