@@ -1,25 +1,25 @@
-function confereAlimentos(){
-    var numeroAlimento = window.prompt('Quantas comidas você quer colocar?')
-    var alimentos = []
+function validaAlimentos(){
+    var nAlimentos = parseInt(prompt('Qual a quantidade de alimentos?'))
+    var alimentosLista = []
     var contador = 0
-    while(contador != numeroAlimento){
-        var alimento = window.prompt('Qual o alimento você quer adicionar?')
+    while (contador < nAlimentos){
+        var alimento = prompt('Qual é o alimento?')
         if (alimento.length % 2 == 1){
-            alimentos.push(alimento)
+            alimentosLista.push(alimento)
             contador++
         } else {
-            window.alert('Comida inválida, insira outra!')
-        }
+            alert('Esse alimento tem número de letras par, não foi adicionado!')
+        } 
     }
-    return alimentos
+    return alimentosLista
 }
-    
-function mostraTela(itens){
-    var cont = 0
-    while(cont < itens.length){
-        document.write(`<li>${itens[cont]}</li>`)
-        cont++
+
+function mostraTela(lista){
+    var i = 0
+    while (i < lista.length){
+        document.write(`<li>${lista[i]}</li>`)
+        i++
     }
 }
 
-mostraTela(confereAlimentos())
+mostraTela(validaAlimentos())
