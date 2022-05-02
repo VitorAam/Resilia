@@ -69,6 +69,13 @@ p {
     height: 2vh;
 }
 
+#answer {
+    background-color: rgb(182, 174, 174);
+    margin: 1vh;
+    padding: 1vw;
+    border-radius: 6px;
+}
+
 button {
     min-width: 8vw;
 }

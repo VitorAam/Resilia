@@ -4,6 +4,7 @@ var botao = document.querySelector('#button_container')
 var cesar = document.querySelector('#cifraDeCesar')
 var base64  = document.querySelector('#base64')
 var incremento = document.querySelector('#incremento')
+var res = document.querySelector('#answer')
 
 cesar.addEventListener("click", function(){
     incremento.innerHTML = `<label for="incre">Adicione o incremento:</label>
@@ -15,22 +16,63 @@ base64.addEventListener("click", function(){
 })
 
 codifica.addEventListener("click", function (){
-    botao.innerHTML = '<button id="action1">Codifique: </button>'
-    var agirC = document.querySelector('#action1')
-    agirC.addEventListener("click", function(){
-        console.log('teste')
+    botao.innerHTML = '<button id="action">Codifique: </button>'
+    var msg = document.querySelector('#msg').value.toLowerCase()
+    var agir = document.querySelector('#action')
+    agir.addEventListener("click", function(){
+        //O IF é no caso de ser base64, else para cifra de cesar
+        if (cesar.checked == false){
+            res.innerHTML = `<span>Codificado:</span><p>${btoa(msg)}</p>`
+        } else {
+            var incre = Number(document.querySelector('#incre').value)
+            var stringf = ''
+            for (var i = 0; i<msg.length; i++){
+                if (msg.charCodeAt(i) < 97 || msg.charCodeAt(i) > 122){
+                    stringf += msg[i]
+                } else {
+                    var r = msg.charCodeAt(i) + incre
+                    while(r > 122){
+                        r = (r-122)+96
+                    }
+                    while(r < 97){
+                        r = r+26
+                    }
+                    stringf += String.fromCharCode(r)
+                }
+                
+            }
+            res.innerHTML = `<span>Codificado:</span> <p>${stringf}</p>`
+        }
     })
 })
 
 decodifica.addEventListener("click", function(){
-    botao.innerHTML = '<button id="action2">Decodifique: </button>'
-    var agirD = document.querySelector('#action2')
-    agirD.addEventListener("click", function(){
-        console.log(cesar.checked)
+    botao.innerHTML = '<button id="action">Decodifique: </button>'
+    var msg = document.querySelector('#msg').value.toLowerCase()
+    var agir = document.querySelector('#action')
+    agir.addEventListener("click", function(){
+        //O IF é no caso de ser base64, else para cifra de cesar
+        if (cesar.checked == false){
+            res.innerHTML = `<span>Decodificado:</span><p>${atob(document.querySelector('#msg').value)}</p>`
+        } else {
+            var incre = Number(document.querySelector('#incre').value)
+            var stringf2 = ''
+            for (var i = 0; i<msg.length; i++){
+                if (msg.charCodeAt(i) < 97 || msg.charCodeAt(i) > 122){
+                    stringf2 += msg[i]
+                } else {
+                    var r = msg.charCodeAt(i) - incre
+                    while(r > 122){
+                        r = (r-122)+96
+                    }
+                    while(r < 97){
+                        r = r+26
+                    }
+                    stringf2 += String.fromCharCode(r)
+                }
+                
+            }
+            res.innerHTML = `<span>Decodificado:</span><p>${stringf2}</p>`
+        }
     })
 })
-
-
-function teste(){
-    var areaTexto = document.querySelector('textarea')
-}
