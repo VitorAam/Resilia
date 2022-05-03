@@ -72,8 +72,11 @@ p {
 #answer {
     background-color: rgb(182, 174, 174);
     margin: 1vh;
-    padding: 1vw;
     border-radius: 6px;
+}
+
+#answer p, span {
+    padding: 1vw;
 }
 
 button {
