@@ -6,6 +6,7 @@ var base64  = document.querySelector('#base64')
 var incremento = document.querySelector('#incremento')
 var res = document.querySelector('#answer')
 
+
 cesar.addEventListener("click", function (){
     incremento.innerHTML = `<label for="incre">Adicione o passo:</label>
     <input type="number" id="incre">`
@@ -25,7 +26,7 @@ codifica.addEventListener("click", function (){
         //O IF é no caso de ser base64, else para cifra de cesar
         if (cesar.checked == false){
         //Essa parte do código é para codificar base64
-            res.innerHTML = `<span>Codificado:</span><p>${btoa(msg)}</p>`
+            res.innerHTML = `<span>Codificado:</span><p>${btoa(document.querySelector('#msg').value)}</p>`
         } else {
         //Essa parte do código é para codificar em Cifra de César
             var incre = Number(document.querySelector('#incre').value)
