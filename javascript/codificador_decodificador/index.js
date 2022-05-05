@@ -19,7 +19,7 @@ base64.addEventListener("click", function (){
 codifica.addEventListener("click", function (){
     //Criação do botão de codificação
     botao.innerHTML = '<button id="action">Codifique: </button>'
-    var msg = document.querySelector('#msg').value.toLowerCase()
+    var msg = document.querySelector('#msg').value
     var agir = document.querySelector('#action')
     //Ação do botão de codificação
     agir.addEventListener("click", function (){
@@ -33,11 +33,8 @@ codifica.addEventListener("click", function (){
             var stringf = ''
             for (var i = 0; i<msg.length; i++){
             //Passagem por cada elemento da mensagem original
-                if (msg.charCodeAt(i) < 97 || msg.charCodeAt(i) > 122){
-                //Elemento que não está no alfabeto
-                    stringf += msg[i]
-                } else {
-                //Elemento que está no alfabeto
+                if (msg.charCodeAt(i) > 96 && msg.charCodeAt(i) < 123){
+                    //Elemento que está no alfabeto em minúscula
                     var r = msg.charCodeAt(i) + incre
                     //Reinicia o alfabeto quando o código passa do correspondente à última letra
                     while(r > 122){
@@ -45,6 +42,18 @@ codifica.addEventListener("click", function (){
                     }
                     //Adiciona o elemento com a codificação à string final
                     stringf += String.fromCharCode(r)
+                } else if (msg.charCodeAt(i) > 64 && msg.charCodeAt(i) < 91){
+                    //Elemento que está no alfabeto em maiúscula
+                    var r = msg.charCodeAt(i) + incre
+                    //Reinicia o alfabeto quando o código passa do correspondente à última letra
+                    while(r > 90){
+                        r = (r-90)+64
+                    }
+                    //Adiciona o elemento com a codificação à string final
+                    stringf += String.fromCharCode(r)
+                } else {
+                    //Elemento que não está no alfabeto
+                    stringf += msg[i]
                 }
             }
             //Resposta final da codificação
@@ -53,9 +62,11 @@ codifica.addEventListener("click", function (){
     })
 })
 
+//O evento a seguir é o de decodificação, ele segue a mesma base do evento de codificação, basta ler os comentários anteriores e realizar a comparação.
+
 decodifica.addEventListener("click", function(){
     botao.innerHTML = '<button id="action">Decodifique: </button>'
-    var msg = document.querySelector('#msg').value.toLowerCase()
+    var msg = document.querySelector('#msg').value
     var agir = document.querySelector('#action')
     agir.addEventListener("click", function(){
         //O IF é no caso de ser base64, else para cifra de cesar
@@ -65,14 +76,20 @@ decodifica.addEventListener("click", function(){
             var incre = Number(document.querySelector('#incre').value)
             var stringf2 = ''
             for (var i = 0; i<msg.length; i++){
-                if (msg.charCodeAt(i) < 97 || msg.charCodeAt(i) > 122){
-                    stringf2 += msg[i]
-                } else {
+                if (msg.charCodeAt(i) > 96 && msg.charCodeAt(i) < 123){
                     var r = msg.charCodeAt(i) - incre
                     while(r < 97){
                         r = r+26
                     }
                     stringf2 += String.fromCharCode(r)
+                } else if (msg.charCodeAt(i) > 64 && msg.charCodeAt(i) < 91){
+                    var r = msg.charCodeAt(i) - incre
+                    while(r<65){
+                        r = r+26
+                    }
+                    stringf2 += String.fromCharCode(r)
+                } else {
+                    stringf2 += msg[i]
                 }
             }
             res.innerHTML = `<span>Decodificado:</span><p>${stringf2}</p>`
