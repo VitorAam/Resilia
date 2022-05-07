@@ -1,56 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>XMLHTTP + Manipulando de DOM</title>
 </head>
 <body>
-  <form id="formulario">
-    
-    <div id="bloco1">
-      <label for="entrada"><h4>Digite a mensagem aqui:</h4></label>
-      <textarea type="text" id="txtentrada" class="message" name="text" value="entrada" rows="10" cols="27" placeholder="Digite aqui..."></textarea>
+    <div class="usr">
     </div>
-    
-    <div id="bloco2">
-      <div id="box0">
-        <label for="cifras">Escolha o tipo de cifra</label>
-        <select name="cifras" id="cifras">
-          <option value="Escolha uma..." selected disabled hidden>Escolha uma...</option>
-          <option value="cifraCesar" id="cifraCesar">Cifra de César</option>
-          <option value="base64" id="base64">Base 64</option>
-        </select>
-      </div>
-           
-      <div id="box-chave">
-      <label for="deslocamento">Chave da cifra</label>
-      <input type="number" id="chave" name="chave">
-      </div>
-
-      <p>Escolha uma das opções abaixo</p>
-      <div id="box1-2">
-        <div id="box1">
-          <input onclick="changeButton1()" type="radio" name="cod/decod" value="codificar" id="codificar">
-          <label for="codificar">Codificar</label>
-        </div>
-
-        <div id="box2">
-          <input onclick="changeButton2()" type="radio" name="cod/decod" value="decodificar" id="decodificar">
-          <label for="decodificar">Decodificar</label>
-        </div>
-    </div>
-      <button id="btn">...</button>
-    </div>
-    
-    <div id="bloco3">
-      <label for="saida"><h4>Mensagem final:</h4></label>
-      <textarea type="text" id="txtsaida" class="message" name="text" value="saida" rows="10" cols="27" placeholder="Mensagem final aparecerá aqui..."></textarea>
-    </div>
-    
-  </form>
-  
-  <script src="./teste.js"></script>
+    <div>
+      <button class="mane-btn" onclick="geraUsuario()"> Gerar usuário aleatório</button>
+    </div>  
+    <script src="./teste.js"></script> 
 </body>
 </html>
