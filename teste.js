@@ -1,37 +1,10 @@
-function geraUsuario() {
-    var req = new XMLHttpRequest();
-    req.open('GET', 'https://randomuser.me/api');
-    req.onload = function() {
-        if (req.status == 200) {
-            usuarioTxt = req.response;
-            usuarioObj = JSON.parse(usuarioTxt);
-            addUsrPag(usuarioObj);
-        } else {
-            console.log('deu algum erro de status' + req.status);
-        }
-    };
-    req.send();
-}
+function removeSmallest(numbers) {
+    var teste = numbers.sort().reverse().pop()
+    var teste2 = numbers.reverse()
+    console.log(teste2)
+ }
 
-function addUsrPag(respObj) {
-    var usr = respObj.results[0];
-    var nameNode = genNodeName(usr);
-    var emailNode = genNodeEmail(usr);
-    var usrDiv = document.querySelector(".usr");
-    usrDiv.innerHTML = "";
-    usrDiv.appendChild(nameNode);
-    usrDiv.appendChild(emailNode);
-    console.log(usr)
-}
 
-function genNodeName(usr) {
-    var usrName = document.createElement("h2");
-    usrName.textContent = `${usr.name.first} ${usr.name.last}`;
-    return usrName;
-}
+removeSmallest([1, 2, 3, 4, 5])
 
-function genNodeEmail(usr) {
-    var usrEmail = document.createElement("h4");
-    usrEmail.textContent = `${usr.email}`;
-    return usrEmail;
-}
+removeSmallest([5, 4, 3, 1, 2])
