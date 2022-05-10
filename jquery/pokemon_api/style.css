@@ -1,19 +1,42 @@
 body {
     background-color: #3B4149;
+    background-image: url(img/pokemon-video-games-pixel-art-pixels-1361965-wallhere.com.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .lbl {
-    color: #E8E4E2;
+    color: black;
     text-align: center;
     font-family: "Verdana";
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px rgb(34, 117, 38);
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+    row-gap: 2vh;
+}
+
+section {
+    width: 50vw;
+    margin: 3vh auto;
+    text-align: center;
+    background-color: rgba(20, 142, 142, 0.736);
+    color: white;
+    border-radius: 10px;
+    padding: 1vh;
+}
+
+img {
+    height: 15vh;
 }

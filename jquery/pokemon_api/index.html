@@ -8,18 +8,25 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form>
-        <label for="pk-name" class="lbl">Nome do Pokémon:</label>
-        <input id="pk-name" type="text"></input>
-        <input id="submit" type="submit" value="Pesquisar">
-      </form>
-      
-      <div class="poke-info">
-      </div>
-     <script
-    src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>  
+    <main>
+        <form>
+            <label for="pk-name" class="lbl">Nome do Pokémon:</label>
+            <input id="pk-name" type="text"></input>
+            <input id="submit" type="submit" value="Pesquisar">
+        </form>
+        <section>
+            <p id="name"></p>
+            <img id="img" src="" alt="">
+            <p id="height"></p>
+            <p id="weight"></p>
+            <p id="moves"></p>
+            <p id="abilities"></p>
+            <p></p>
+        </section>
+        <div class="poke-info">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>  
+    </main>
     <script src="./script.js"></script>
 </body>
 </html>
