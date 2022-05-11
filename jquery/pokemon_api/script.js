@@ -4,7 +4,6 @@ botao.addEventListener('click', function(){
     event.preventDefault()
     //Pegando o valor do input com o .value
     var texto = document.querySelector('#pk-name').value.toLowerCase();
-    var divResultado = document.querySelector('.poke-info');
     //O objeto do JQuery é o '$', e seu metódo é o ajax()
     $.ajax({
         //O valor do input de pesquisa é passado para a url que direciona

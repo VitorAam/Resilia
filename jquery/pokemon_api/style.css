@@ -40,3 +40,10 @@ section {
 img {
     height: 15vh;
 }
+
+footer {
+    align-self: center;
+    justify-self: flex-end;
+    font-size: 1.2em;
+    color: white;
+}
