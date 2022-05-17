@@ -1,10 +1,27 @@
-function removeSmallest(numbers) {
-    var teste = numbers.sort().reverse().pop()
-    var teste2 = numbers.reverse()
-    console.log(teste2)
- }
+const date = new Date();
+const today = date.getDate()+'-'+(date.getMonth()+1)+'-'+date.getFullYear();
 
+class Cliente {
+    constructor(nome, data, ativo){
+        this.nome = nome;
+        this.cadastrado_em = data;
+        this.ativo = ativo;
+    }
+};
 
-removeSmallest([1, 2, 3, 4, 5])
-
-removeSmallest([5, 4, 3, 1, 2])
+const userList = {
+    usuarios: [],
+    criaTeste: function(){
+        this.usuarios.push(new Cliente('Vitor', today, true))
+        this.usuarios.push(new Cliente('Fernando', today, true))
+        this.usuarios.push(new Cliente('Augusto', '23-04-2019', false))
+    },
+    novoUsuario: function(){
+        this.usuarios.push(new Cliente(prompt, prompt, prompt))
+    } ,
+    ordemAlfabetica: function(){
+        for(let i = 0; i<this.usuarios.length; i++){
+            console.log(this.usuarios[i])
+        }
+    }
+};
