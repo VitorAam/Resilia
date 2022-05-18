@@ -4,9 +4,14 @@ function operacoesArit(nOp) {
 }
 
 $('#submit').click(function(){
-    event.preventDefault()
+    event.preventDefault();
     let antes = Date.now();
+    console.log(antes)
     operacoesArit(Number($('#pk-name').val()));
     let duracao = Date.now() - antes;
     console.log(duracao)
 })
+
+let hoje = new Date()
+let today = hoje.getDate()+'/'+(hoje.getMonth() + 1)+'/'+hoje.getFullYear()
+console.log(today)
