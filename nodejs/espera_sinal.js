@@ -1,3 +1,6 @@
+import chalk from "chalk";
+
+
 function comunicacaoPerdida(){
     const randomizacao = Math.floor(Math.random() * 2) + 1
     setTimeout(()=>{
@@ -9,10 +12,10 @@ function comunicacaoPerdida(){
             }
         })
         .then((retorno) =>{
-            console.log(`Sucesso: ${retorno}`)
+            console.log(chalk.blue(`Sucesso: ${retorno}`))
         })
         .catch((erro) => {
-            console.log(`Falha: ${erro}`)
+            console.log(chalk.red(`Falha: ${erro}`))
         });
     },
     2500)
